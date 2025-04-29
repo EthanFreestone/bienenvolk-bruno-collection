@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/erm/refdata?max=100&stats=true
+  url: {{baseUrl}}/erm/refdata
   body: none
   auth: none
 }
 
 params:query {
-  max: 100
-  stats: true
+  ~max: 100
+  ~stats: true
   ~filters: desc==TitleInstance.Type
   ~match: name
   ~match: alternateNames.name
@@ -22,4 +22,13 @@ params:query {
 
 headers {
   ~X-Okapi-Tenant: test1
+}
+
+script:pre-request {
+  // EXAMPLE -- pre request fetch
+  // const data = await folioAxios.get(
+  //   `${getBaseUrl()}/erm/refdata`
+  // );
+  
+  // console.log("WHAT IS DATA: %o", data)
 }
