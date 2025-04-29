@@ -1,0 +1,34 @@
+meta {
+  name: DELETE PCI
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/erm/pci/hdelete
+  body: json
+  auth: none
+}
+
+params:query {
+  ~sort: pti.titleInstance.name
+  ~sort: note
+  ~sort: depth;desc
+  ~sort: pti.titleInstance.name%2C%20note%2C%20depth;desc
+  ~filters: pti.titleInstance.id=754f9a6d-1e80-45d3-8da2-cd025a3ec598
+  ~filters: pti.titleInstance.id=dc040b07-631a-45de-99b8-008e8c48c8c9
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"pCIIds": ["9be2e9a4-2729-4096-9f2c-05f1e9603d37",
+  "43fbdafd-4181-4902-a45e-23dc133aa273",
+  "fe37733b-effd-4cb2-b9a4-535105af4142"]}
+}
+
+body:text {
+  {"pCIIds": ["1", "2", "3"]}
+}
