@@ -13,6 +13,7 @@ get {
 params:query {
   stats: true
   perPage: 25
+  ~filters: nonsense=true
   ~match: name
   ~match: identifiers.identifier.value
   ~match: alternateResourceNames.name

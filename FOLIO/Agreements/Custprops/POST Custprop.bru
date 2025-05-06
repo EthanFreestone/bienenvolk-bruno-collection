@@ -6,8 +6,35 @@ meta {
 
 post {
   url: {{baseUrl}}/erm/custprops
-  body: text
+  body: json
   auth: none
+}
+
+body:json {
+  // {
+  //   "weight": 0,
+  //   "primary": false,
+  //   "category": "2c9180b07f436083017f436311590030",
+  //   "retired": false,
+  //   "defaultInternal": true,
+  //   "label": "testMultiLocalDate",
+  //   "name": "testMultiLocalDate",
+  //   "description": "This is an decimal custprop",
+  //   "type": "MultiLocalDate"
+  // }
+  
+  {
+    "weight": 0,
+    "primary": false,
+    "category": "ff80818196a5b8f00196a60122fd0000",
+    "retired": false,
+    "defaultInternal": true,
+    "label": "EF Test Prop",
+    "name": "efTestProp",
+    "description": "EF Test prop",
+    "ctx": "Test",
+    "type": "Refdata"
+  }
 }
 
 body:text {
