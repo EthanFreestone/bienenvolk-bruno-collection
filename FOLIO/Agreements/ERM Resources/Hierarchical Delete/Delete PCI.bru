@@ -1,11 +1,11 @@
 meta {
-  name: DELETE PCI
+  name: Delete PCI
   type: http
-  seq: 4
+  seq: 2
 }
 
 post {
-  url: {{baseUrl}}/erm/pci/hdelete
+  url: {{baseUrl}}/erm/hierarchicalDelete/delete/pci
   body: json
   auth: none
 }
@@ -24,9 +24,7 @@ headers {
 }
 
 body:json {
-  {"pCIIds": ["9be2e9a4-2729-4096-9f2c-05f1e9603d37",
-  "43fbdafd-4181-4902-a45e-23dc133aa273",
-  "fe37733b-effd-4cb2-b9a4-535105af4142"]}
+  {"resources": ["b2860eb4-546c-4ee1-b58d-f104c11e3450"]} //b2860eb4-546c-4ee1-b58d-f104c11e3450
 }
 
 body:text {
