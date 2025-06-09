@@ -5,13 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/erm/jobs?sort=dateCreated;desc
+  url: {{baseUrl}}/erm/jobs
   body: none
   auth: none
 }
 
 params:query {
-  sort: dateCreated;desc
   ~sort: started;desc
   ~filters: class==org.olf.general.jobs.ComparisonJob
   ~filters: started<=1622205570
