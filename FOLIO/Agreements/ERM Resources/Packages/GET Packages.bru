@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/erm/packages?stats=true&perPage=25
+  url: {{baseUrl}}/erm/packages?stats=true&perPage=25&filters=name==ProQuest: Ebooks: 2024
   body: text
   auth: none
 }
@@ -13,6 +13,7 @@ get {
 params:query {
   stats: true
   perPage: 25
+  filters: name==ProQuest: Ebooks: 2024
   ~filters: nonsense=true
   ~match: name
   ~match: identifiers.identifier.value
@@ -21,4 +22,6 @@ params:query {
   ~term: JSTOR : Arts %26 Science
   ~filters: identifiers isNotEmpty
   ~filters: availabilityConstraints isNotEmpty
+  ~filters: sourceTitleCount isNotNull
+  ~sort: sourceTitleCount;desc
 }
