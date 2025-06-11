@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/erm/rbac/grants
+  url: {{baseUrl}}/erm/rbac/grants?stats=true
   body: none
   auth: inherit
+}
+
+params:query {
+  stats: true
 }
