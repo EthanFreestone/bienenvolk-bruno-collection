@@ -1,0 +1,15 @@
+meta {
+  name: GET Affiliations
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/erm/rbac/affiliations?stats=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+}

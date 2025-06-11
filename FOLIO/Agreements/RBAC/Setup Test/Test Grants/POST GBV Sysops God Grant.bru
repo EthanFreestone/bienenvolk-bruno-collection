@@ -1,0 +1,22 @@
+meta {
+  name: POST GBV Sysops God Grant
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/erm/rbac/grants
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "resourceType": "%SubscriptionAgreement",
+    "resourceId": "%",
+    "resourceOwner": "GBV%",
+    "granteeType": "role",
+    "granteeId": "SYSOPS",
+    "granteeContext": "GBV"
+  }
+}
