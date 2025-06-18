@@ -1,0 +1,20 @@
+meta {
+  name: Get Identifiers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/erm/identifiers?stats=true&perPage=100
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+  perPage: 100
+  ~filters: occurrences isNotEmpty
+  ~filters: value==9781648899294
+  ~filters: ns.value==isbn
+  ~filters: ns.value==gokb
+}

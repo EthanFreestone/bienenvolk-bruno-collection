@@ -1,0 +1,15 @@
+meta {
+  name: Get Identifier Namespaces
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/erm/identifiers/namespaces?stats=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+}

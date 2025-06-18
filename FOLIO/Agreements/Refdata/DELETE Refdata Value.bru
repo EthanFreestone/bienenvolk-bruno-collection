@@ -1,0 +1,24 @@
+meta {
+  name: DELETE Refdata Value
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/erm/refdata/ff80818196a5b8f00196a60122fd0000
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "values": [
+        {
+          "id": "ff80818196a5b8f00196a60122fe0002",
+          "value": "test_1",
+          "label": "Test 1",
+          "_delete": true
+        }
+      ]
+  }
+}
