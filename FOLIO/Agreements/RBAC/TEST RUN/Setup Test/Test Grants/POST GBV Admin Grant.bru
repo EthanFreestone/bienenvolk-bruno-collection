@@ -1,0 +1,22 @@
+meta {
+  name: POST GBV Admin Grant
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/erm/rbac/grants
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "resourceType": "%SubscriptionAgreement",
+    "resourceId": "%",
+    "resourceOwner": "GBV%",
+    "granteeType": "ROLE",
+    "granteeId": "ADMIN",
+    "granteeContext": "GBV/%"
+  }
+}

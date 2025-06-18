@@ -1,0 +1,22 @@
+meta {
+  name: POST UBV User Grant
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/erm/rbac/grants
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "resourceType": "%SubscriptionAgreement",
+    "resourceId": "%",
+    "resourceOwner": "GBV%",
+    "granteeType": "ROLE",
+    "granteeId": "USER",
+    "granteeContext": "GBV/UBV"
+  }
+}
