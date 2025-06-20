@@ -1,0 +1,15 @@
+meta {
+  name: GET Access Policies
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/erm/accessControl?stats=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+}

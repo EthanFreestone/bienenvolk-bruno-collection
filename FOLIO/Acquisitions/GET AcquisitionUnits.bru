@@ -1,0 +1,16 @@
+meta {
+  name: GET AcquisitionUnits
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/acquisitions-units/units?query=cql.allRecords=1 sortby name&limit=2147483647
+  body: none
+  auth: inherit
+}
+
+params:query {
+  query: cql.allRecords=1 sortby name
+  limit: 2147483647
+}
