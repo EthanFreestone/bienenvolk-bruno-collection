@@ -1,0 +1,25 @@
+meta {
+  name: POST Access Policy
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/erm/accessControl?stats=true
+  body: json
+  auth: inherit
+}
+
+params:query {
+  stats: true
+}
+
+body:json {
+  {
+    "type": "ACQ_UNIT",
+    "description": "This is a test desc",
+    "policyId": "12345",
+    "resourceClass": "org.olf.erm.SubscriptionAgreement",
+    "resourceId": "1be018ae-9f1e-42a2-b71b-58b5a6081ee9"
+  }
+}
