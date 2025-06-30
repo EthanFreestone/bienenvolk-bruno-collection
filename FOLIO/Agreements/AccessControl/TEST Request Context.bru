@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/erm/accessControl/testRequestContext
+  url: {{baseUrl}}/erm/accessControl/testRequestContext?stats=true
   body: none
   auth: inherit
+}
+
+params:query {
+  stats: true
 }
