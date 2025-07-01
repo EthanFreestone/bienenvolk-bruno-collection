@@ -1,0 +1,16 @@
+meta {
+  name: GET Custprops
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/licenses/custprops?stats=true&filters=name==test-name-ñ
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+  filters: name==test-name-ñ
+}

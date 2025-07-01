@@ -1,0 +1,27 @@
+meta {
+  name: POST Custprop
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/licenses/custprops
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "weight": "test-weight",
+    //"weight": -2,
+    "primary": false,
+    "retired": true,
+    "defaultInternal": true,
+    "type": "test-type",
+    //"type": "Text",
+    "label": "__TESTING!@#$%TYUIOP",
+    "name": "test-name-ñ",
+    "description": "test-description",
+    "ctx": "test-ctx"
+  }
+}
