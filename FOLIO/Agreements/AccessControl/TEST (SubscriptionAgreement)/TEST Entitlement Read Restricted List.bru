@@ -1,0 +1,15 @@
+meta {
+  name: TEST Entitlement Read Restricted List
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/erm/entitlements/testReadRestrictedList?stats=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: TEST SAS canApplyPolicies
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/erm/sas/91dde6b8-b689-4106-9c53-16afc470eb65/canApplyPolicies
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~stats: true
+}

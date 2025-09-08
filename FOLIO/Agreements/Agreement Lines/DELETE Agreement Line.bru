@@ -1,0 +1,23 @@
+meta {
+  name: DELETE Agreement Line
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/erm/entitlements/4d18a2d2-e4f7-4edc-a302-08c6b31d8513
+  body: none
+  auth: none
+}
+
+body:text {
+  {
+      "type": "external",
+      "authority": "12345",
+      "reference": "abcde",
+      "description": "Agreement line for an restricted SubscriptionAgreement",
+      "owner": {
+          "id": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
+      }
+  }
+}

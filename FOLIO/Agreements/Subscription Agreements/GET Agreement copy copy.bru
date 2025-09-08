@@ -1,0 +1,19 @@
+meta {
+  name: GET Agreement copy copy
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/erm/sas/828c87b1-e746-40f6-9dda-9d07ccac0bb7
+  body: none
+  auth: none
+}
+
+params:query {
+  ~expandItems: true
+  ~excludes: items
+  ~excludes: linkedLicenses
+  ~perPage: 3
+  ~filters: orgs.roles.role.value=content_provider
+}

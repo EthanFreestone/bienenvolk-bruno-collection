@@ -1,0 +1,15 @@
+meta {
+  name: TEST unrestricted Entitlement GET policies copy
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/erm/entitlements/2a63a12f-0f68-4967-bab3-e62630beb90c/policies?stats=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+}

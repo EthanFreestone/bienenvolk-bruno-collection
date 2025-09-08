@@ -1,0 +1,15 @@
+meta {
+  name: TEST SAS canDelete
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/erm/sas/91dde6b8-b689-4106-9c53-16afc470eb65/canDelete
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~stats: true
+}

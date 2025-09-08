@@ -1,0 +1,27 @@
+meta {
+  name: GET KBs
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/erm/kbs
+  body: none
+  auth: none
+}
+
+params:query {
+  ~expand: items
+  ~stats: true
+}
+
+headers {
+  ~X-Okapi-Tenant: test8
+}
+
+script:post-response {
+  // console.log("RES: %o", res.body)
+  const harvestKB = res.body.find(kb => kb.name === 'GOKb_TEST' || kb.name === 'GOKb')
+  
+  bru.setVar('GOKB_KB', harvestKB.id);
+}

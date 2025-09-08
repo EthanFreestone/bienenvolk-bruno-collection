@@ -1,0 +1,15 @@
+meta {
+  name: TEST SAS canRead
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/erm/sas/ced8cc34-ea7a-493c-a5f4-695e0bfabc5e/canRead
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~stats: true
+}

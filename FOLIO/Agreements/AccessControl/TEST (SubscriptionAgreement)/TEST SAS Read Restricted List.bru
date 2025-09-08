@@ -1,0 +1,18 @@
+meta {
+  name: TEST SAS Read Restricted List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/erm/sas?stats=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  stats: true
+  ~filters: name==EF Test Agreement 4
+  ~perPage: 2
+  ~page: 2
+}

@@ -1,0 +1,35 @@
+meta {
+  name: POST External AgreementLine
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/erm/entitlements
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "type": "external",
+    "authority": "12345",
+    "reference": "abcde",
+    "description": "Agreement line for an restricted SubscriptionAgreement",
+    "owner": {
+      "id": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
+    }
+  }
+}
+
+body:text {
+  {
+      "type": "external",
+      "authority": "12345",
+      "reference": "abcde",
+      "description": "Agreement line for an restricted SubscriptionAgreement",
+      "owner": {
+          "id": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
+      }
+  }
+}

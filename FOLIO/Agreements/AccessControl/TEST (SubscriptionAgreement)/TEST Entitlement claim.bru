@@ -1,0 +1,31 @@
+meta {
+  name: TEST Entitlement claim
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/erm/entitlements/0a130d58-f32a-411b-b6dd-2d95b6cb4570/claim
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~stats: true
+}
+
+body:json {
+  {
+    "claims": [
+      {
+        "id": "1c9cb63a-6b1e-4d6b-9979-b7eb20bcf609",
+        "dateCreated": 1750839607505,
+        "resourceClass": "org.olf.erm.SubscriptionAgreement",
+        "resourceId": "ed4bb6b8-4319-4739-be07-a73e60c6ad63",
+        "type": "ACQ_UNIT",
+        "policyId": "11d68595-e2a1-4342-af76-346942196cd0",
+        "description": "Restricted policy -- member (agreement 4)"
+      }
+    ]
+  }
+}

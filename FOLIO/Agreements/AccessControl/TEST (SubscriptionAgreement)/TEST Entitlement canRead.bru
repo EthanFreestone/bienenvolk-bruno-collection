@@ -1,0 +1,15 @@
+meta {
+  name: TEST Entitlement canRead
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/erm/entitlements/0a130d58-f32a-411b-b6dd-2d95b6cb4570/canRead
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~stats: true
+}

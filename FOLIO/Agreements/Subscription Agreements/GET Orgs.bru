@@ -1,0 +1,25 @@
+meta {
+  name: GET Orgs
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/erm/sas/91dde6b8-b689-4106-9c53-16afc470eb65?expandItems=true
+  body: none
+  auth: none
+}
+
+params:query {
+  expandItems: true
+  ~excludes: items
+  ~excludes: linkedLicenses
+  ~perPage: 3
+  ~filters: orgs.roles.role.value=content_provider
+}
+
+headers {
+  X-Okapi-Tenant: test1
+  X-Okapi-Token: dummy
+  X-Okapi-User-Id: test-user-id
+}

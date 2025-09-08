@@ -1,0 +1,17 @@
+meta {
+  name: TEST SAS GET policies
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/erm/sas/8f179729-0106-4ca1-bc85-6f697fa3d3d2/policies
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~stats: true
+  ~perPage: 2
+  ~page: 2
+}

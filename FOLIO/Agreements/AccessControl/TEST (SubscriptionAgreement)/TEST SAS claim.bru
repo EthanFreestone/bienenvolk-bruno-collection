@@ -1,0 +1,77 @@
+meta {
+  name: TEST SAS claim
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/erm/sas/8f179729-0106-4ca1-bc85-6f697fa3d3d2/claim
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "claims": [
+      {
+        "id": "79e36420-6b40-423b-b0f5-483b206a0ac7",
+        "type": "ACQ_UNIT",
+        "policy": {
+          "id": "83f5e7db-cfbc-402f-9a1f-c1006a9e9990",
+          "name": "Test Acq Unit No Create",
+          "protectCreate": true,
+          "protectDelete": false,
+          "protectRead": false,
+          "protectUpdate": false,
+          "isMember": true,
+          "deleted": false
+        },
+        "description": "Policy for Agreement 2"
+      },
+      {
+        "id": "a1f55b36-c79b-485e-80a9-b13a9315dcaa",
+        "policy": {
+          "id": "d5a3b023-e83a-46d5-857a-91c65822f0c3",
+          "name": "Space explorers",
+          "protectCreate": false,
+          "protectDelete": false,
+          "protectRead": true,
+          "protectUpdate": false,
+          "isMember": true,
+          "deleted": false
+        },
+        "type": "ACQ_UNIT",
+        "description": "Another policy for agreement 2"
+      }
+      //    // {
+      //       "type": "ACQ_UNIT",
+      //       "policyId": "26cd9436-81d3-4e35-a49e-a900ed6950b7",
+      //       "description": "Should fail"
+      //     }
+      //     {
+      //       "type": "ACQ_UNIT",
+      //       "policyId": "6dbffc23-0db9-423c-97c8-7acdc52e354c",
+      //       "description": "Restricted policy -- non member (agreement 8)"
+      //     }
+      //     {
+      //       "type": "ACQ_UNIT",
+      //       "policyId": "Made up id, user doesn't have access"
+      //     },
+      //     {
+      //       "type": "ACQ_UNIT",
+      //       "policyId": "c6bf977e-b14e-46d6-a3bb-c633bcb39be5",
+      //       "description": "Extra one"
+      //     },
+      //     {
+      //       "type": "KI_GRANT",
+      //       "policyId": "%",
+      //       "description": "KI_GRANT Check"
+      //     },
+      //     {
+      //       "type": "ACQ_UNIT",
+      //       "policyId": "11d68595-e2a1-4342-af76-346942196cd0",
+      //       "description": "REPEATED one"
+      //     }
+    ]
+  }
+}

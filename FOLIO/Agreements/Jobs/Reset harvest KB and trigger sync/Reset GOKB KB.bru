@@ -1,0 +1,41 @@
+meta {
+  name: Reset GOKB KB
+  type: http
+  seq: 19
+}
+
+put {
+  url: {{baseUrl}}/erm/kbs/{{GOKB_KB}}
+  body: json
+  auth: none
+}
+
+params:query {
+  ~expand: items
+  ~stats: true
+}
+
+body:json {
+  // {
+  //     "syncStatus": null,
+  //     "cursor": "2022-08-09T16:15:47Z",
+  //     //"active": true
+  // }
+  
+  {
+      "id": {{GOKB_KB}},
+      "cursor": null,
+  //     "active": true,
+  //     "trustedSourceTI": false,
+  //     "activationEnabled": false,
+  //     "readonly": false,
+  //     "syncStatus": "idle",
+      "lastCheck": null//,
+  //     "name": "GOKb_TEST",
+  //     "type": "org.olf.kb.adapters.GOKbOAIAdapter",
+  //     "fullPrefix": "gokb",
+  //     "uri": "https://gokbt.gbv.de/gokb/oai/index",
+  //     "supportsHarvesting": true,
+  //     "rectype": 1
+    }
+}

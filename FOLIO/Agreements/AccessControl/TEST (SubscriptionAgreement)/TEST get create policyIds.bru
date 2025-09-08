@@ -1,0 +1,18 @@
+meta {
+  name: TEST get create policyIds
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/erm/accessControl/createPolicies
+  body: none
+  auth: inherit
+}
+
+body:json {
+  // {
+  //   "owner": "0a130d58-f32a-411b-b6dd-2d95b6cb4570",
+  //   "poLineId": "restricted POLine"
+  // }
+}

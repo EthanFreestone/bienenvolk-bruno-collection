@@ -1,0 +1,17 @@
+meta {
+  name: Permissions Users
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/perms/users?length=10&query=permissions=module.ill-ui.enabled sortby id
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 10
+  query: permissions=module.ill-ui.enabled sortby id
+  ~expandSubs: true
+}
