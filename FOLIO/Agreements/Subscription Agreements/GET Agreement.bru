@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/erm/sas/716764e2-f061-4e47-8a1a-6b6f2b18bd60?expandItems=true
+  url: {{baseUrl}}/erm/sas/91dde6b8-b689-4106-9c53-16afc470eb65?expandItems=true
   body: none
   auth: none
 }
@@ -16,4 +16,10 @@ params:query {
   ~excludes: linkedLicenses
   ~perPage: 3
   ~filters: orgs.roles.role.value=content_provider
+}
+
+headers {
+  X-Okapi-Tenant: test1
+  X-Okapi-Token: dummy
+  X-Okapi-User-Id: test-user-id
 }
