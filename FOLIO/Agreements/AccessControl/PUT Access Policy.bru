@@ -1,0 +1,23 @@
+meta {
+  name: PUT Access Policy
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/erm/accessControl/6e4a588f-379f-44a5-ab61-64697af9b222
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+        "id": "6e4a588f-379f-44a5-ab61-64697af9b222",
+        "dateCreated": 1750839066954,
+        "resourceClass": "org.olf.erm.SubscriptionAgreement",
+        "type": "ACQ_UNIT",
+        "policyId": "9bfe4e3a-4f69-4fcd-b83a-46bf580cd162",
+        "description": "Restricted policy -- non member", // Changing this did NOT work
+        "resourceId": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
+      }
+}

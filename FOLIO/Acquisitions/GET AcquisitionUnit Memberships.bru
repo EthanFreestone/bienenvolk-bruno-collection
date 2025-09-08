@@ -1,0 +1,18 @@
+meta {
+  name: GET AcquisitionUnit Memberships
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/acquisitions-units/memberships?limit=2147483647&query=(userId==defaultPatronId)
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 2147483647
+  query: (userId==defaultPatronId)
+  ~query: (userId==a432e091-e445-40e7-a7a6-e31c035cd51a)
+  ~query: (acquisitionsUnitId==ba7b8596-16db-420e-ab9b-be19230b4c91)
+}

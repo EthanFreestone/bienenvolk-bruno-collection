@@ -1,0 +1,18 @@
+meta {
+  name: GET AcquisitionUnits
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/acquisitions-units/units?limit=2147483647&query=(id=="efd03229-3559-4164-b223-b709bee83dd2" OR id=="9c53c2e9-0e05-48c9-b4df-22d8d03086a8")
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 2147483647
+  query: (id=="efd03229-3559-4164-b223-b709bee83dd2" OR id=="9c53c2e9-0e05-48c9-b4df-22d8d03086a8")
+  ~query: cql.allRecords=1 sortby name
+  ~query: (protectCreate==false)
+}

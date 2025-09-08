@@ -1,0 +1,17 @@
+meta {
+  name: GET Access Policies
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/erm/accessControl?filters=resourceId=91dde6b8-b689-4106-9c53-16afc470eb65
+  body: none
+  auth: inherit
+}
+
+params:query {
+  filters: resourceId=91dde6b8-b689-4106-9c53-16afc470eb65
+  ~stats: true
+  ~filters: resourceId=27cb0e22-04cb-4c69-848f-57fe7bfe6b7f
+}

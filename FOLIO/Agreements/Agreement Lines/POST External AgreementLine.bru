@@ -6,8 +6,30 @@ meta {
 
 post {
   url: {{baseUrl}}/erm/entitlements
-  body: text
+  body: json
   auth: none
+}
+
+body:json {
+  // {
+  //   "type": "external",
+  //   "authority": "12345",
+  //   "reference": "abcde",
+  //   "description": "Agreement line for an restricted SubscriptionAgreement",
+  //   "owner": {
+  //     "id": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
+  //   }
+  // }
+  
+  {
+    "type": "external",
+    "authority": "ethan-1",
+    "reference": "ethan-1",
+    "description": "Test delete",
+    "owner": {
+      "id": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
+    }
+  }
 }
 
 body:text {
@@ -15,8 +37,9 @@ body:text {
       "type": "external",
       "authority": "12345",
       "reference": "abcde",
+      "description": "Agreement line for an restricted SubscriptionAgreement",
       "owner": {
-          "id": "bb783a8a-33e3-4ed5-a364-9f972a5be353"
+          "id": "716764e2-f061-4e47-8a1a-6b6f2b18bd60"
       }
   }
 }
